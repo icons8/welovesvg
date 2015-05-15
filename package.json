@@ -1,0 +1,14 @@
+{
+  "name": "svg-sets",
+  "description": "Svg sets compilation for popular iconic projects",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/icons8/svg-sets.git"
+  },
+  "tags": [
+    "svg",
+    "svg-font",
+    "svg-set"
+  ],
+  "license": "MIT"
+}
