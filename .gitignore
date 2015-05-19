@@ -3,4 +3,4 @@
 *.log
 .DS_STORE
 /src
-
+/build.sh
