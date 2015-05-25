@@ -4,3 +4,4 @@
 .DS_STORE
 /src
 /build.sh
+/libs/*/*/*.orig.svg
