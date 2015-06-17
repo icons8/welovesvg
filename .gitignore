@@ -5,3 +5,4 @@
 /src
 /build.sh
 /libs/*/*/*.orig.svg
+*.bak
