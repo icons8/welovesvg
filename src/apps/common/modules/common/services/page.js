@@ -1,0 +1,4 @@
+
+ng.service('page', [function() {
+
+}]);

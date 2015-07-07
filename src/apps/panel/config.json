@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "common"
+  ],
+  "es6": {
+    "modules": [
+      "panel"
+    ]
+  },
+  "exports": {
+    "config": {
+      "modules": [
+        "panel"
+      ]
+    },
+    "locale": {
+      "modules": [
+        "panel"
+      ]
+    }
+  },
+  "packages": {
+    "panel-vendors": [
+      "../../bower_components/angular-soft-loop/dist/angular-soft-loop.js"
+    ]
+  },
+  "projects": {
+    "panel-dependencies": [
+      ":packages/panel-vendors.js"
+    ],
+    "panel-app": [
+      ":modules/extensions.js",
+      ":modules/panel.js",
+      "scripts/panelAppBootstrap.js"
+    ]
+  }
+}

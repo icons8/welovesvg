@@ -1,0 +1,10 @@
+{
+  "debug": {
+    "enabled": false
+  },
+
+  "page" : {
+    "baseUrl" : "/",
+    "title" : ""
+  }
+}
