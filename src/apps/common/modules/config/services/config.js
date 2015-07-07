@@ -2,11 +2,15 @@
 ng.provider('config', function() {
   var
     defaults = {},
+    ConfigConstructor,
     config = {},
     configProvider
     ;
 
-  config.__proto__ = defaults;
+  ConfigConstructor = function() {};
+  ConfigConstructor.prototype = defaults;
+
+  config = new ConfigConstructor;
 
   configProvider = function(cfg) {
     configProvider.append(cfg);
@@ -41,7 +45,14 @@ ng.provider('config', function() {
     return from.reduce((to, from) => _merge(to, from), to);
 
     function _merge(to, from) {
-      if (!to || !from || typeof to != 'object' || typeof from != 'object' || Array.isArray(to) || Array.isArray(from)) {
+      if (!to
+        || !from
+        || typeof to != 'object'
+        || typeof from != 'object'
+        || Array.isArray(to)
+        || Array.isArray(from)
+        || to instanceof Date
+        || from instanceof Date) {
         return from;
       }
       Object.keys(from).forEach((key) => {

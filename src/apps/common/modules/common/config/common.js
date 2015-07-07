@@ -4,8 +4,6 @@ ng.config([
   function(config) {
 
     config({
-      api: {
-      },
       debug: {
         enabled: false,
         ns: {}

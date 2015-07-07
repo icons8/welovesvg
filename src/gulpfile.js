@@ -28,6 +28,7 @@ var connect = require('gulp-connect');
 var traceur = require('gulp-traceur');
 var bower = require('gulp-bower');
 var rename = require('gulp-rename');
+var babel = require('gulp-babel');
 
 var argv = yargs
   .usage('Usage: $0 ' +
@@ -51,11 +52,12 @@ var argv = yargs
   '')
   .argv;
 
-
+// traceurRuntimeJs
 var traceurRuntimeJs = 'node_modules/traceur/bin/traceur-runtime.js';
 var traceurOptions = {
   //asyncFunctions: true
 };
+var babelPolyfillJs = 'node_modules/babel-core/browser-polyfill.js';
 
 var getDestBase = function() {
   return argv.destBase || 'build';
@@ -119,6 +121,17 @@ var isDebug = function() {
 };
 var isLocal = function() {
   return typeof argv.local == 'undefined' || argv.local;
+};
+
+var getES6PolyfillJsPath = function() {
+  return argv.es6compiler === 'babel'
+    ? babelPolyfillJs
+    : traceurRuntimeJs;
+};
+var getES6Compiler = function() {
+  return argv.es6compiler === 'babel'
+    ? babel()
+    : traceur(traceurOptions);
 };
 
 var isConnect = function() {
@@ -694,7 +707,7 @@ gulp.task('scripts.modules', function() {
           .pipe(templateCache({ module: name }).on('error', gutil.log))
       )
         .pipe(concat(name + '.js'))
-        .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
+        .pipe(gulpif(es6, getES6Compiler().on('error', gutil.log)))
         .pipe(header(begin))
         .pipe(footer(end))
         .pipe(gulpif(ngAnnotateFix, ngAnnotate().on('error', gutil.log)))
@@ -738,7 +751,7 @@ gulp.task('scripts.apps.locales', function() {
           return path.relative(base, path.join(paths.dest.base, dir, name.replace(/:(modules)/gi, '$1')));
         }
         if (name == ':es6.js') {
-          return path.relative(base, path.normalize(traceurRuntimeJs));
+          return path.relative(base, path.normalize(getES6PolyfillJsPath()));
         }
         return name;
       })
@@ -755,7 +768,7 @@ gulp.task('scripts.apps.locales', function() {
         gulp.src(sourcesToPaths(locales[key][localeId] || []), { cwd: base })
           .pipe(footer(';'))
           .pipe(concat(key + '.js'))
-          .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
+          .pipe(gulpif(es6, getES6Compiler().on('error', gutil.log)))
           .pipe(gulpif(es6, header(prefix)))
           .pipe(gulpif(es6, footer(suffix)))
           .pipe(gulpif(ngAnnotateFix, ngAnnotate().on('error', gutil.log)))
@@ -799,7 +812,7 @@ gulp.task('scripts.apps.packages', function() {
           return path.relative(base, path.join(paths.dest.base, dir, name.replace(/:(modules|locales)/gi, '$1')));
         }
         if (name == ':es6.js') {
-          return path.relative(base, path.normalize(traceurRuntimeJs));
+          return path.relative(base, path.normalize(getES6PolyfillJsPath()));
         }
         return name;
       })
@@ -816,7 +829,7 @@ gulp.task('scripts.apps.packages', function() {
         gulp.src(sourcesToPaths(packages[key]), { cwd: base })
           .pipe(footer(';'))
           .pipe(concat(key + '.js'))
-          .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
+          .pipe(gulpif(es6, getES6Compiler().on('error', gutil.log)))
           .pipe(gulpif(es6, header(prefix)))
           .pipe(gulpif(es6, footer(suffix)))
           .pipe(gulpif(ngAnnotateFix, ngAnnotate().on('error', gutil.log)))
@@ -859,7 +872,7 @@ gulp.task('scripts.apps.projects', function() {
           return path.relative(base, path.join(paths.dest.base, dir, name.replace(/:(modules|locales|packages)/gi, '$1')));
         }
         if (name == ':es6.js') {
-          return path.relative(base, path.normalize(traceurRuntimeJs));
+          return path.relative(base, path.normalize(getES6PolyfillJsPath()));
         }
         return name;
       })
@@ -876,7 +889,7 @@ gulp.task('scripts.apps.projects', function() {
         gulp.src(sourcesToPaths(projects[key]), { cwd: base })
           .pipe(footer(';'))
           .pipe(concat(key + '.js'))
-          .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
+          .pipe(gulpif(es6, getES6Compiler().on('error', gutil.log)))
           .pipe(gulpif(es6, header(prefix)))
           .pipe(gulpif(es6, footer(suffix)))
           .pipe(gulpif(ngAnnotateFix, ngAnnotate().on('error', gutil.log)))
