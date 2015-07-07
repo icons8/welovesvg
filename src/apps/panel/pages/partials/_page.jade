@@ -1,3 +1,10 @@
 body
-  h1= $.page.title
-
+  center
+    h1= t($.page.title)
+      = ' '
+      small= t('coming soon')
+    webicon(icon="font-awesome:github" style="color: #32c24d")
+    div= t('by')
+      = ' '
+      a(href="https://icons8.com")= t('Icons8')
+    br

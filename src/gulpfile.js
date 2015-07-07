@@ -143,8 +143,10 @@ var getPagesRoot = function() {
 };
 
 var getIndex = function() {
-  return argv.index;
-}
+  return argv.index && typeof argv.index == 'string'
+    ? argv.index
+    : null;
+};
 
 var getLocaleId = function() {
   return argv.locale;
@@ -535,7 +537,6 @@ var filterAllowedPatterns = function(/* pattern[, ...] */) {
 ['fonts', 'images'].forEach(function(key) {
   gulp.task(key, function () {
     return gulp.src(filterAllowedPatterns(paths.src[key]), { cwd: paths.src.base })
-      .pipe(plumber())
       .pipe(gulp.dest(paths.dest.base))
       .pipe(gulpif(isConnectLivereload(), connect.reload().on('error', gutil.log)))
       ;
@@ -544,7 +545,6 @@ var filterAllowedPatterns = function(/* pattern[, ...] */) {
 
 gulp.task('styles', function() {
   return gulp.src(filterAllowedPatterns(paths.src.styles), { cwd: paths.src.base })
-    .pipe(plumber())
     .pipe(sass({errLogToConsole: true, indentedSyntax: true}).on('error', gutil.log))
     .pipe(autoprefixer().on('error', gutil.log))
     .pipe(gulpif(isMinify(), minifycss({processImport: false}).on('error', gutil.log)))
@@ -573,7 +573,6 @@ gulp.task('copy', function() {
 
       tasks.push(
         gulp.src(options.from, { cwd: base })
-          .pipe(plumber())
           .pipe(gulp.dest(path.join(dir, options.to), { cwd: paths.dest.base }))
       );
 
@@ -600,16 +599,13 @@ gulp.task('pages', function() {
 
     tasks.push(
       streamqueue({ objectMode: true },
-        gulp.src(['pages/**/*.{html,htm}'], { cwd: base })
-          .pipe(plumber()),
+        gulp.src(['pages/**/*.{html,htm}'], { cwd: base }),
         gulp.src(['pages/**/*.ejs'], { cwd: base })
-          .pipe(plumber())
           .pipe(ejs(getAppTemplateContext(name)).on('error', gutil.log)),
         gulp.src(['pages/**/*.jade', '!pages/**/_*.jade'], { cwd: base })
-          .pipe(plumber())
           .pipe(jade({locals: getAppTemplateContext(name)}).on('error', gutil.log))
+          .pipe(plumber())
       )
-        .pipe(plumber())
         .pipe(gulp.dest(path.join(dir, getPagesRoot()), { cwd: paths.dest.base }))
     );
   });
@@ -682,27 +678,21 @@ gulp.task('scripts.modules', function() {
     tasks.push(
       streamqueue({ objectMode: true },
         gulp.src(['module.js', '**/*.js', '!**/_*.js', '!**/*.{example,debug,local}.js'], { cwd: base })
-          .pipe(plumber())
           .pipe(footer(';')),
         gulp.src(isDebug() ? ['**/*.debug.js', '!**/_*.js'] : [], { cwd: base })
-          .pipe(plumber())
           .pipe(footer(';')),
         gulp.src(isLocal() ? ['**/*.local.js', '!**/_*.js'] : [], { cwd: base })
-          .pipe(plumber())
           .pipe(footer(';')),
         gulp.src(['templates/**/*.{html,htm}'], { cwd: base })
-          .pipe(plumber())
           .pipe(templateCache({ module: name }).on('error', gutil.log)),
         gulp.src(['templates/**/*.ejs'], { cwd: base })
-          .pipe(plumber())
           .pipe(ejs(getAppTemplateContext(appName)).on('error', gutil.log))
           .pipe(templateCache({ module: name }).on('error', gutil.log)),
         gulp.src(['templates/**/*.jade', '!templates/**/_*.jade'], { cwd: base })
-          .pipe(plumber())
           .pipe(jade({locals: getAppTemplateContext(appName)}).on('error', gutil.log))
+          .pipe(plumber())
           .pipe(templateCache({ module: name }).on('error', gutil.log))
       )
-        .pipe(plumber())
         .pipe(concat(name + '.js'))
         .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
         .pipe(header(begin))
@@ -763,7 +753,6 @@ gulp.task('scripts.apps.locales', function() {
         ;
       tasks.push(
         gulp.src(sourcesToPaths(locales[key][localeId] || []), { cwd: base })
-          .pipe(plumber())
           .pipe(footer(';'))
           .pipe(concat(key + '.js'))
           .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
@@ -825,7 +814,6 @@ gulp.task('scripts.apps.packages', function() {
         ;
       tasks.push(
         gulp.src(sourcesToPaths(packages[key]), { cwd: base })
-          .pipe(plumber())
           .pipe(footer(';'))
           .pipe(concat(key + '.js'))
           .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
@@ -886,7 +874,6 @@ gulp.task('scripts.apps.projects', function() {
         ;
       tasks.push(
         gulp.src(sourcesToPaths(projects[key]), { cwd: base })
-          .pipe(plumber())
           .pipe(footer(';'))
           .pipe(concat(key + '.js'))
           .pipe(gulpif(es6, traceur(traceurOptions).on('error', gutil.log)))
@@ -1014,11 +1001,19 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('watch', function() {
+  var
+    index;
+
   watch(paths.src.fonts, ['fonts']);
   watch(paths.src.images, ['images']);
   watch(paths.src.stylesWatch, ['styles']);
   watch(paths.src.pagesWatch, ['pages']);
   watch(paths.src.scriptsWatch, ['scripts.apps']);
+
+  index = getIndex();
+  if (index) {
+    watch(path.join(path.relative(paths.src.base, paths.dest.base), index), ['index']);
+  }
 
   function watch(patterns, tasks) {
     var

@@ -21,7 +21,9 @@
   },
   "packages": {
     "panel-vendors": [
-      "../../bower_components/angular-soft-loop/dist/angular-soft-loop.js"
+      "../../bower_components/angular-soft-loop/dist/angular-soft-loop.js",
+      "../../bower_components/webicon/angular-webicon-core.js",
+      "../../bower_components/webicon/extensions/welovesvg.js"
     ]
   },
   "projects": {

@@ -8,6 +8,8 @@
     "angular-touch": "~1.4.1",
     "angular-ui-router": "~0.2.15",
     "angular-digest-logger": "~0.1.2",
-    "angular-soft-loop": "~0.1.0"
+    "angular-soft-loop": "~0.1.0",
+    "bootstrap-sass": "~3.3.5",
+    "webicon": "0.10.1"
   }
 }
