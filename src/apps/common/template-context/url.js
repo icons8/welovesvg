@@ -3,6 +3,10 @@ var path = require('path');
 
 var createUrl = function(base, url) {
   url = (url || '').trim();
+  if (!base) {
+    return url;
+  }
+
   if (url.charAt(0) == '/') {
     url = url.substr(1);
   }
