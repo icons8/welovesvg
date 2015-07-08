@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "common"
+  ],
+  "es6": {
+    "modules": [
+      "panel.panel"
+    ]
+  },
+  "exports": {
+    "config": {
+      "modules": [
+        "panel.panel"
+      ]
+    },
+    "locale": {
+      "modules": [
+        "panel.panel"
+      ]
+    }
+  },
+  "packages": {
+    "panel-vendors": [
+      "../../bower_components/angular-soft-loop/dist/angular-soft-loop.js",
+      "../../bower_components/webicon/angular-webicon-core.js",
+      "../../bower_components/webicon/extensions/welovesvg.js",
+      "../../bower_components/lunr.js/lunr.js"
+    ]
+  },
+  "projects": {
+    "panel-dependencies": [
+      ":packages/panel-vendors.js"
+    ],
+    "panel-app": [
+      ":modules/panel.extensions.js",
+      ":modules/panel.panel.js",
+      "scripts/panelAppBootstrap.js"
+    ]
+  }
+}

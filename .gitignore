@@ -4,5 +4,4 @@
 .DS_STORE
 bower_components
 node_modules
-/src/build
 
