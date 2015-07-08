@@ -8,13 +8,13 @@ ng.config([
     config = configProvider.get();
 
     $webiconProvider.preload(
-      config.webicon.preload.names,
+      config.webicon.preload.force || config.webicon.preload.names,
       [
         '$promise',
         'iconCollectionsManager',
-        'DeferredIconCollection',
+        'IconCollectionDeferred',
         'Icon',
-        function($promise, iconCollectionsManager, DeferredIconCollection, Icon) {
+        function($promise, iconCollectionsManager, IconCollectionDeferred, Icon) {
           var
             promises;
 
@@ -48,7 +48,7 @@ ng.config([
               });
 
             iconCollectionsManager.add(
-              new DeferredIconCollection(key, promise)
+              new IconCollectionDeferred(key, promise)
             );
 
           });

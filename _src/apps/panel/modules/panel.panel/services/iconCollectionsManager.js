@@ -1,15 +1,18 @@
 
 ng.factory('iconCollectionsManager', [
-  function() {
+  'ViewIconCollection',
+  function(ViewIconCollection) {
 
     class IconCollectionsManager {
 
       constructor() {
         this.collections = [];
+        this.views = [];
       }
 
       add(collection) {
         this.collections.push(collection);
+        this.views.push(new ViewIconCollection(collection));
       }
 
     }

@@ -3,7 +3,31 @@ body
     h1= t($.page.title)
       = ' '
       small= t('coming soon')
-    webicon(icon="font-awesome:github" style="color: #32c24d; height: 370px;")
+
+    br
+    br
+    .row
+      .col-md-8.col-md-offset-2
+        input.form-control.input-lg(type="text" ng-model="search" placeholder=t('Search'))
+    br
+    br
+
+    div(inject-service="iconCollectionsManager")
+      div(ng-repeat="view in iconCollectionsManager.views track by view.collection.id" ng-show="view.visible")
+        h3 {{::view.collection.label}}
+          small(ng-show="view.collection.pending")
+            = ' ' + t('loading...')
+        br
+        div(ng-if="!view.collection.pending")
+          div(ng-repeat="icon in view.collection.search(search) track by icon.id" style="display: inline-block; width: 60px; text-align: center; vertical-align: top;")
+            webicon(icon="{{::view.collection.id}}:{{::icon.id}}" style="height: 40px; width: 40px")
+            .text-muted(style="font-size: .7em") {{::icon.label}}
+          br
+          br
+
+
+    br
+    br
     div= t('by')
       = ' '
       a(href="https://icons8.com")= t('Icons8')

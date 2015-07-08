@@ -1,10 +1,10 @@
 
 
-ng.factory('DeferredIconCollection', [
+ng.factory('IconCollectionDeferred', [
   'IconCollection',
   function(IconCollection) {
 
-    class DeferredIconCollection extends IconCollection {
+    class IconCollectionDeferred extends IconCollection {
 
       constructor(id, promise) {
         super(id);
@@ -24,7 +24,7 @@ ng.factory('DeferredIconCollection', [
 
     }
 
-    return DeferredIconCollection;
+    return IconCollectionDeferred;
 
   }
 ]);

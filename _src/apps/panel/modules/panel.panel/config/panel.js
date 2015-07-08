@@ -6,7 +6,12 @@ ng.config([
     config({
       webicon: {
         preload: {
-          names: true
+          names: [
+            'flat-color-icons',
+            'font-awesome',
+            'material-icons',
+            'ionicons'
+          ]
         }
       }
     });

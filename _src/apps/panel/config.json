@@ -4,6 +4,7 @@
   ],
   "es6": {
     "modules": [
+      "panel.extensions",
       "panel.panel"
     ]
   },

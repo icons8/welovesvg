@@ -38,6 +38,9 @@ ng.factory('IconCollection', [
       }
 
       search(text) {
+        if (!text && text !== 0) {
+          return this.icons.slice();
+        }
         return this.searchIndex
           .search(text)
           .map(item => this.idIndex.get(item.ref));
