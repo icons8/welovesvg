@@ -2,7 +2,6 @@
 var ng = angular.module('common.common', [
   'ngSanitize',
   'ngTouch',
-  'ngAnimate',
   'ui.router',
   'common.extensions',
   'common.config',

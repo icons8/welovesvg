@@ -1,6 +1,15 @@
 
-@import "variables";
+@import "mixins/block";
+@import "mixins/important-font";
+@import "mixins/base-font";
+
 @import "reset";
 
 //@import "directives/...";
-//@import "components/...";
+
+@import "components/collectionSelect";
+@import "components/searchIconsPanel";
+@import "components/searchInput";
+@import "components/page";
+@import "components/collectionIcons";
+@import "components/spinner";

@@ -1,0 +1,5 @@
+button(
+ng-repeat="item in collections.views track by item.collection.id"
+ng-class="{'btn-primary': collections.isCurrent(item), 'btn-default': !collections.isCurrent(item)}"
+ng-click="collections.setCurrent(item)"
+) {{::item.collection.label}}

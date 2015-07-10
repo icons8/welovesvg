@@ -742,6 +742,7 @@ gulp.task('scripts.modules', function() {
         gulp.src(
           [
             'config/**/*.js',
+            '!**/!*.js',
             '!**/*.example.js',
             !isDebug() ? '!**/*.debug.js' : null,
             !isLocal() ? '!**/*.local.js' : null
@@ -755,6 +756,7 @@ gulp.task('scripts.modules', function() {
         gulp.src(
           [
             '**/*.js',
+            '!**/!*.js',
             '!module.js',
             '!config/**',
             '!**/*.example.js',

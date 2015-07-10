@@ -1,13 +1,15 @@
 
 
 ng.factory('IconCollection', [
+  'EventEmitterFactory',
   'humanize',
   'lunr',
-  function(humanize, lunr) {
+  function(EventEmitterFactory, humanize, lunr) {
 
-    class IconCollection {
+    class IconCollection extends EventEmitterFactory {
 
       constructor(id) {
+        super();
         this.id = id;
         this.icons = [];
         this.idIndex = new Map();
@@ -27,6 +29,10 @@ ng.factory('IconCollection', [
         });
       }
 
+      clear() {
+        this.icons.length = 0;
+      }
+
       addIcons(icons = []) {
         this.icons.push(
           ...icons
@@ -35,6 +41,8 @@ ng.factory('IconCollection', [
           this.searchIndex.add(icon);
           this.idIndex.set(icon.id, icon);
         });
+
+        this.emit('update');
       }
 
       search(text) {

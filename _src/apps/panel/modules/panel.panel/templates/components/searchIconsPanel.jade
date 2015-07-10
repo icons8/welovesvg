@@ -1,0 +1,13 @@
+.header
+  h1= t($.page.title)
+    sup= t('β')
+
+  .row
+    .col-md-10.col-md-offset-1
+      collection-select(collections="collections")
+    .col-md-6.col-md-offset-3
+      search-input(search="search")
+
+.body
+  .col-md-10.col-md-offset-1
+    collection-icons(search="search" collection="collections.current")
