@@ -1,16 +1,15 @@
 {
   "name": "welovesvg-gh-pages",
   "dependencies": {
+    "jquery": "^2.0.0",
     "angular": "~1.4.1",
     "angular-i18n": "~1.4.1",
     "angular-sanitize": "~1.4.1",
-    "angular-animate": "~1.4.1",
     "angular-touch": "~1.4.1",
-    "angular-ui-router": "~0.2.15",
     "angular-digest-logger": "^0.1.2",
-    "angular-soft-loop": "^0.1.0",
     "bootstrap-sass": "~3.3.5",
-    "webicon": "0.10.3-43b2b3a",
-    "lunr.js": "~0.5.10"
+    "webicon": "~0.10.5",
+    "lunr.js": "~0.5.11",
+    "angular-highlightjs": "~0.4.1"
   }
 }

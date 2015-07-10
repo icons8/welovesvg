@@ -1,4 +1,55 @@
 collection-icons
   +block
   .icon
-    margin: 13px
+    margin: 8px
+    padding: 5px
+
+    display: inline-block
+    width: 60px
+    text-align: center
+    vertical-align: top
+
+    cursor: pointer
+
+    &:hover
+      border-radius: 3px
+      background: rgba(0, 0, 0, .03)
+
+  webicon
+    width: 40px
+    height: 40px
+
+  .ng-highlight
+    font-weight: 600
+    color: #000
+
+  .icon-label
+    @extend .text-muted
+
+  .icon-popover
+    position: absolute
+    left: 0
+    top: 0
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .4)
+    border-radius: 3px
+    background: #fff
+    padding: 5px
+
+  .icon-popover-icon-box
+    width: 50px
+    text-align: center
+    display: inline-block
+    vertical-align: top
+
+  .icon-popover-code
+    display: inline-block
+    vertical-align: top
+    pre
+      padding: 0
+      margin: 0
+      border: 0
+      border-radius: 0
+      line-height: 30px
+      &, code
+        background: transparent
+

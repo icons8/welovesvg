@@ -26,7 +26,7 @@ ng.factory('IconCollectionRemote', [
 
         this.promise.cancel && this.promise.cancel();
         this.pending = true;
-        promise = this.promise = $q.when($webicon.preload([this.id]).iconSets[this.id])
+        promise = this.promise = $q.when($webicon.preload(this.id).iconSets[this.id])
           .then(value => {
             var
               collection,

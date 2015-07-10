@@ -22,20 +22,29 @@
   },
   "packages": {
     "panel-vendors": [
-      "../../bower_components/angular-soft-loop/dist/angular-soft-loop.js",
+      "../../bower_components/jquery/dist/jquery.js",
       "../../bower_components/webicon/angular-webicon-core.js",
       "../../bower_components/webicon/extensions/welovesvg.js",
-      "../../bower_components/lunr.js/lunr.js"
+      "../../bower_components/lunr.js/lunr.js",
+      "../../bower_components/highlightjs/highlight.pack.js",
+      "../../bower_components/angular-highlightjs/angular-highlightjs.js"
     ]
   },
   "projects": {
     "panel-dependencies": [
-      ":packages/panel-vendors.js"
+      ":packages/panel-vendors.js",
+      "../common/:modules/common.popover.js"
     ],
     "panel-app": [
       ":modules/panel.extensions.js",
       ":modules/panel.panel.js",
       "scripts/panelAppBootstrap.js"
     ]
-  }
+  },
+  "copy": [
+    {
+      "from": "../../bower_components/highlightjs/styles/github.css",
+      "to": "styles/hljs/."
+    }
+  ]
 }

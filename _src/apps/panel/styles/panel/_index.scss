@@ -1,5 +1,6 @@
 
-@import "mixins/block";
+@import "../extensions/index";
+
 @import "mixins/important-font";
 @import "mixins/base-font";
 
@@ -12,4 +13,3 @@
 @import "components/searchInput";
 @import "components/page";
 @import "components/collectionIcons";
-@import "components/spinner";

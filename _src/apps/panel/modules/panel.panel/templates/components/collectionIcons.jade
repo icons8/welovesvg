@@ -2,11 +2,26 @@ div(ng-if="collection.collection.pending")
   center
     spinner
 
-div(ng-if="!collection.collection.pending")
+
+
+div(ng-if="!collection.collection.pending" shift="collection" popover-manager="popover.opened")
   div.icon(
   ng-repeat="icon in ::collection.views track by icon.icon.id"
   ng-show="icon.visible"
-  style="display: inline-block; width: 60px; text-align: center; vertical-align: top;"
+  popover-open=""
+  ng-click="showIconPopover(icon, $event)"
   )
-    webicon(icon="{{::collection.collection.id}}:{{::icon.icon.id}}" style="height: 40px; width: 40px")
-    .text-muted(style="font-size: .7em") {{::icon.icon.label}}
+    webicon(icon="{{::collection.collection.id}}:{{::icon.icon.id}}")
+    .icon-label(style="font-size: .7em" highlight-text="{{::icon.icon.label}}" highlight-text-needle="{{$parent.search}}" highlight-text-from-word-start="true")
+
+  .icon-popover(popover="")
+    .icon-popover-icon-box
+      webicon(icon="{{collection.collection.id}}:{{::popover.icon.icon.id}}" ng-style="{color: popover.color}")
+    .icon-popover-code(
+    hljs=""
+    language="html"
+    source='\'' +
+      escape('<webicon icon="') +
+      '{{collection.collection.id}}:{{::popover.icon.icon.id}}' +
+      '"/>\' | unescape'
+    )

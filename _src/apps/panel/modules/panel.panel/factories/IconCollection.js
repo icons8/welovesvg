@@ -24,8 +24,8 @@ ng.factory('IconCollection', [
       initSearchIndex() {
         this.searchIndex = lunr(function() {
           this.field('label');
-          this.field('id');
           this.ref('id');
+          this.pipeline.remove(lunr.stopWordFilter);
         });
       }
 
