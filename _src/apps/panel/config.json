@@ -45,6 +45,10 @@
     {
       "from": "../../bower_components/highlightjs/styles/github.css",
       "to": "styles/hljs/."
+    },
+    {
+      "from": "../../bower_components/github-fork-ribbon-css/gh-fork-ribbon.css",
+      "to": "styles/."
     }
   ]
 }

@@ -1,5 +1,9 @@
 {
   "page" : {
     "title" : "We Love SVG"
+  },
+
+  "ghRepository": {
+    "url": "https://github.com/icons8/welovesvg"
   }
 }

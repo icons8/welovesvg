@@ -10,6 +10,7 @@
     "bootstrap-sass": "~3.3.5",
     "webicon": "~0.10.5",
     "lunr.js": "~0.5.11",
-    "angular-highlightjs": "~0.4.1"
+    "angular-highlightjs": "~0.4.1",
+    "github-fork-ribbon-css": "~0.1.1"
   }
 }
