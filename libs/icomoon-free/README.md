@@ -1,4 +1,4 @@
-This great icon font was taken from [IcoMoon](https://icomoon.io/). Feel free to use it in your projects under the [GPL](http://www.gnu.org/licenses/gpl.html) and the [Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
+This great icon font was taken from [Entypo+](http://www.entypo.com/). Feel free to use it in your projects under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
 ##Creative Commons Attribution 4.0 International (CC BY 4.0)
 ###You are free to:
 
