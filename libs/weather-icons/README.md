@@ -1,4 +1,4 @@
-This wonderful icon font was taken from [Weathe Icons](http://erikflowers.github.io/weather-icons/). Feel free to use it in your projects under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/).
+This wonderful icon font was taken from [Weather Icons](http://erikflowers.github.io/weather-icons/). Feel free to use it in your projects under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/).
 ##Creative Commons Attribution 3.0 Unported (CC BY 3.0)
 ###You are free to:
 
