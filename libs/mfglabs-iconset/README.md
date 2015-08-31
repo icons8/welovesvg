@@ -1,4 +1,4 @@
-This cool icon font was taken from [MFG Labs](https://mfglabs.github.io/mfglabs-iconset/). Feel free to use it in your projects under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/).
+This excellent icon font was taken from [MFG Labs](https://mfglabs.github.io/mfglabs-iconset/). Feel free to use it in your projects under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/).
 ##Creative Commons Attribution 3.0 Unported (CC BY 3.0)
 ###You are free to:
 
