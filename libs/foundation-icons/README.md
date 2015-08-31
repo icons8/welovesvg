@@ -1,4 +1,4 @@
-This great icon font was taken from [Foundation](http://foundation.zurb.com/icon-fonts.html). Feel free to use it in your project under the MIT Open Source License.
+This great icon font was taken from [Foundation](http://foundation.zurb.com/icon-fonts.html). Feel free to use it in your projects under the MIT Open Source License.
 ##MIT Open Source License
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
