@@ -1,1 +1,1 @@
-2.2.2
+This fabulous icon font was taken from [Octicons](https://octicons.github.com/). Feel free to use it in your projects under the [SIL Open Font License 1.1 (OFL)](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
