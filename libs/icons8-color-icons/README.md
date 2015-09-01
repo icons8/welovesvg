@@ -1,4 +1,4 @@
-This exceptional icon font was taken from [Icons8](https://icons8.com/c/flat-color-icons/). Feel free to use it in your projects under the [Good Boy License](https://icons8.com/good-boy-license).
+This stunning icon font was taken from [Icons8](https://icons8.com/c/windows-10-icons/). Feel free to use it in your projects under the [Good Boy License](https://icons8.com/good-boy-license).
 ##Good Boy License
 Please do whatever *your mom would approve of*.
 ###Permitted Use
