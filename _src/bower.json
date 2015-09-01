@@ -11,6 +11,7 @@
     "webicon": "~0.10.7",
     "lunr.js": "~0.5.11",
     "angular-highlightjs": "~0.4.1",
-    "github-fork-ribbon-css": "~0.1.1"
+    "github-fork-ribbon-css": "~0.1.1",
+    "angular-markdown-directive": "~0.3.1"
   }
 }

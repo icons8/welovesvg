@@ -11,3 +11,8 @@
 .body
   .col-md-10.col-md-offset-1
     collection-icons(search="search" collection="collections.current")
+
+  .col-md-8.col-md-offset-2(inject-service="config")
+    br
+    div(btf-markdown="config.collections.licenses[collections.current.collection.id]")
+

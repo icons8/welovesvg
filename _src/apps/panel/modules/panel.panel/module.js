@@ -4,5 +4,6 @@ var ng = angular.module('panel.panel', [
   'panel.extensions',
   'common.popover',
   'webicon',
-  'hljs'
+  'hljs',
+  'btford.markdown'
 ]);
