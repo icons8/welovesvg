@@ -1,4 +1,4 @@
-This excellent icon font was taken from [Metrize Icons](http://www.alessioatzeni.com/metrize-icons/). Feel free to use it in your projects under the conditions listed on [Meteocons website](http://www.alessioatzeni.com/meteocons/).
+This excellent icon font was taken from [Metrize Icons](http://www.alessioatzeni.com/metrize-icons/). Feel free to use it in your projects under the conditions listed on the [Alessio Atzeni's website](http://www.alessioatzeni.com/meteocons/).
 ##License
 
 You are free to use Metrize Icons (the "Icon Set") or any part thereof (the "Icons") in any personal, open-source or commercial work without obligation of payment (monetary or otherwise) or attribution.
