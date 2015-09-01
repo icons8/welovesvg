@@ -1,1 +1,1 @@
-2.11
+This fascinating icon font was taken from [Ligature Symbols](http://kudakurage.com/ligature_symbols/). Feel free to use it in your projects under the [SIL Open Font License 1.1 (OFL)](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
