@@ -1,9 +1,5 @@
 **We Love SVG** is like Google Fonts but for icons. It makes it quick and easy to insert icons into web pages. It contains 9,769 icons from 30 popular icon packs.
 
-## Technology: SVG sets
-SVG sets were created with [svg-caster](https://github.com/icons8/svg-caster).
-It allows to convert SVG fonts into SVG sets. We think SVG sets are better than iconic webfonts, separate SVG or PNG sprites. [It's just cool](https://icons8.com/2015/07/29/webicon-svg-sets-icons/).
-
 ## Technology: Webicon
 
 [Webicon](https://github.com/icons8/webicon) is a quick and lightweight way of embedding icons into HTML page
@@ -11,6 +7,10 @@ It allows to convert SVG fonts into SVG sets. We think SVG sets are better than 
 * Only the icons you need are loaded
 * No uploading, re-generating, or any other overhead
 * Prevents your left socks from disappearing in your washing machine 
+
+## Technology: SVG sets
+SVG sets were created with [svg-caster](https://github.com/icons8/svg-caster).
+It allows to convert SVG fonts into SVG sets. We think SVG sets are better than iconic webfonts, separate SVG or PNG sprites. [It's just cool](https://icons8.com/2015/07/29/webicon-svg-sets-icons/).
 
 ##Icon Packs Included
 
