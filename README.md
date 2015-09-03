@@ -8,7 +8,7 @@
 * Glyphicons
 * Icomoon
 * Ionicons
-* Webhostinghub
+* WebHostingHub Glyphs
 * Entypo
 * Elusive
 * Icons8 WPF UI Framework
