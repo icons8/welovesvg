@@ -8,7 +8,7 @@
 * No uploading, re-generating, or any other overhead
 * Prevents your left socks from disappearing in your washing machine 
 
-## Technology: SVG sets
+## Technology: SVG Sets
 SVG sets were created with [svg-caster](https://github.com/icons8/svg-caster).
 It allows to convert SVG fonts into SVG sets. We think SVG sets are better than iconic webfonts, separate SVG or PNG sprites. [Here's why](https://icons8.com/2015/07/29/webicon-svg-sets-icons/).
 
