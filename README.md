@@ -10,7 +10,7 @@
 
 ## Technology: SVG sets
 SVG sets were created with [svg-caster](https://github.com/icons8/svg-caster).
-It allows to convert SVG fonts into SVG sets. We think SVG sets are better than iconic webfonts, separate SVG or PNG sprites. [It's just cool](https://icons8.com/2015/07/29/webicon-svg-sets-icons/).
+It allows to convert SVG fonts into SVG sets. We think SVG sets are better than iconic webfonts, separate SVG or PNG sprites. [Here's why](https://icons8.com/2015/07/29/webicon-svg-sets-icons/).
 
 ##Icon Packs Included
 
