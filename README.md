@@ -32,7 +32,7 @@
 * Stateface
 
 ## Technology: SVG sets
-SVG sets created with [svg-caster](https://github.com/icons8/svg-caster).
+SVG sets were created with [svg-caster](https://github.com/icons8/svg-caster).
 It allows convert SVG fonts into SVG sets. We think SVG sets are better than iconic webfonts, separate SVG or PNG sprites. [It's just cool](https://icons8.com/2015/07/29/webicon-svg-sets-icons/).
 
 ## Technology: Webicon
