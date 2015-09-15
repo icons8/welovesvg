@@ -1,6 +1,17 @@
-.header
+.header(ng-init='modalShown = false')
   h1= t($.page.title)
     sup= t('β')
+  .subheader
+    p Google Fonts for icons. Based on
+      = ' '
+      a(href="https://github.com/icons8/webicon", target="_blank") Webicon
+    p Instructions: 1. Insert
+      = ' '
+      a.modal-link(href='', ng-click='modalShown = !modalShown') this code
+    p 2. Search and click icons
+
+  modal-dialog.ng-modal-wrapper(show='modalShown')
+    p &lt;script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/angular-webicon.min.js"&gt;&lt;/script&gt;
 
   .row
     .col-md-10.col-md-offset-1
@@ -15,4 +26,3 @@
   .col-md-8.col-md-offset-2(inject-service="config")
     br
     div(btf-markdown="config.collections.licenses[collections.current.collection.id]")
-
