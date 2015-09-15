@@ -6,9 +6,9 @@ ng.config([
     config({
       collections: {
         names: [
-          'fa',
-          'win10',
           'color-icons',
+          'win10',
+          'fa',
           'foundation',
           'material',
           'glyphicons',
@@ -37,10 +37,18 @@ ng.config([
           'fontelico',
           'stateface'
         ],
+        labels: {
+          'color-icons': 'Flat Color',
+          'wpf': 'WPF',
+          'fa': 'Font Awesome'
+        },
+        headers: {
+
+        },
         licenses: {
-          "fa": `This excellent icon font was taken from [Font Awesome](http://fontawesome.io/). Feel free to use it in your projects under the [SIL Open Font License 1.1 (OFL)](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).`,
+          "flat-color": `This exceptional icon font was taken from [Icons8](https://icons8.com/c/flat-color-icons/). Feel free to use it in your projects under the [Good Boy License](https://icons8.com/good-boy-license).`,
           "win10": `This stunning icon font was taken from [Icons8](https://icons8.com/c/windows-10-icons/). Feel free to use it in your projects under the [Good Boy License](https://icons8.com/good-boy-license).`,
-          "color-icons": `This exceptional icon font was taken from [Icons8](https://icons8.com/c/flat-color-icons/). Feel free to use it in your projects under the [Good Boy License](https://icons8.com/good-boy-license).`,
+          "fa": `This excellent icon font was taken from [Font Awesome](http://fontawesome.io/). Feel free to use it in your projects under the [SIL Open Font License 1.1 (OFL)](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).`,
           "foundation": `This great icon font was taken from [Foundation](http://foundation.zurb.com/icon-fonts.html). Feel free to use it in your projects under the [MIT Open Source License](http://opensource.org/licenses/MIT).`,
           "material": `This perfect icon font was taken from [Material Icons](https://www.google.com/design/icons/). Feel free to use it in your projects under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).`,
           "glyphicons": `This cool icon font was taken from [Glyphions](http://glyphicons.com/). Feel free to use it in your projects under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/).`,
@@ -71,6 +79,5 @@ ng.config([
         }
       }
     });
-
   }
 ]);

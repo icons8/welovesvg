@@ -2,4 +2,4 @@ button(
 ng-repeat="item in collections.views track by item.collection.id"
 ng-class="{'btn-primary': collections.isCurrent(item), 'btn-default': !collections.isCurrent(item)}"
 ng-click="collections.setCurrent(item)"
-) {{::item.collection.label}}
+) {{:: config.collections.labels[item.collection.id] || item.collection.label}}
