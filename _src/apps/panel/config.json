@@ -26,7 +26,7 @@
       "../../bower_components/webicon/angular-webicon-core.js",
       "../../bower_components/webicon/extensions/welovesvg.js",
       "../../bower_components/lunr.js/lunr.js",
-      "../../bower_components/highlightjs/highlight.pack.js",
+      "../../bower_components/highlightjs/index.js",
       "../../bower_components/angular-highlightjs/angular-highlightjs.js",
       "../../bower_components/showdown/compressed/Showdown.js",
       "../../bower_components/angular-markdown-directive/markdown.js"
@@ -45,7 +45,7 @@
   },
   "copy": [
     {
-      "from": "../../bower_components/highlightjs/styles/github.css",
+      "from": "../../bower_components/highlightjscss/index.css",
       "to": "styles/hljs/."
     },
     {

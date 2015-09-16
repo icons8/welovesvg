@@ -10,7 +10,9 @@
     "bootstrap-sass": "~3.3.5",
     "webicon": "~0.10.7",
     "lunr.js": "~0.5.11",
-    "angular-highlightjs": "~0.4.1",
+    "highlightjscss": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css",
+    "highlightjs": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js",
+    "angular-highlightjs": "~0.4",
     "github-fork-ribbon-css": "~0.1.1",
     "angular-markdown-directive": "~0.3.1"
   }
