@@ -11,15 +11,33 @@
     p 2. Search and click icons
 
   modal-dialog.ng-modal-wrapper(show='modalShown')
-    p &lt;script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/angular-webicon.min.js"&gt;&lt;/script&gt;
+    h4 AngularJS version
+    div(
+      hljs=""
+      language="html"
+      source='\'' +
+        '<script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/angular-webicon.min.js"></script>'
+        + '\''
+    )
+    h4 jQuery version
+    div(
+      hljs=""
+      language="html"
+      source='\'' +
+        '<script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script>'
+        + '\''
+    )
 
   .row
     .col-md-10.col-md-offset-1
       collection-select(collections="collections")
-    .col-md-6.col-md-offset-3
-      search-input(search="search")
 
 .body
+  h2(ng-bind="config.collections.labels[collections.current.collection.id] || collections.current.collection.label")
+
+  .col-md-6.col-md-offset-3
+    search-input(search="search")
+
   .col-md-10.col-md-offset-1
     collection-icons(search="search" collection="collections.current")
 
