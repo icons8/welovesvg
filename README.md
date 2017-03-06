@@ -6,7 +6,7 @@
 * Embedding in less than a minute
 * Only the icons you need are loaded
 * No uploading, re-generating, or any other overhead
-* Prevents your left socks from disappearing in your washing machine 
+* Prevents your left socks from disappearing in your washing machine
 
 ## Technology: SVG Sets
 SVG sets were created with [svg-caster](https://github.com/icons8/svg-caster).
@@ -17,6 +17,7 @@ It allows to convert SVG fonts into SVG sets. We think SVG sets are better than 
 * FontAwesome
 * Icons8 Windows 10 Icons
 * Icons8 Color Icons
+* Icons8 Line Awesome Icons
 * Foundation
 * Google Material Icons
 * Glyphicons
