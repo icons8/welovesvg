@@ -46,6 +46,12 @@ It allows to convert SVG fonts into SVG sets. We think SVG sets are better than 
 * Fontelico
 * Stateface
 
+## Related
+* [IconPharm](https://iconpharm.com/) — all icons from WeLoveSVG with the interface of [Icons8](https://icons8.com/web-app). It means, you can recolor, resize, and scale the icons, generate fonts, SVG sprites, etc.
+
+* [Sleek Logo](https://sleeklogo.design/) — same as the above, but containing the _icon size_ logotypes of the IT companies, from [Facebook](https://sleeklogos.design/web-app/13912/facebook) and [Twitter](https://sleeklogos.design/web-app/13963/twitter) to [Photoshop](https://sleeklogos.design/web-app/category/all/reading-apps) and [WordPress](https://sleeklogos.design/web-app/13664/wordpress).
+
+
 ## Author
 
 * Twitter: [@Icons_8](https://twitter.com/)
