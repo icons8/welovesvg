@@ -52,7 +52,7 @@ It allows to convert SVG fonts into SVG sets. We think SVG sets are better than 
 * [Sleek Logo](https://sleeklogos.design/) — same as the above, but containing the _icon size_ logotypes of the IT companies, from [Facebook](https://sleeklogos.design/web-app/13912/facebook) and [Twitter](https://sleeklogos.design/web-app/13963/twitter) to [Photoshop](https://sleeklogos.design/web-app/category/all/reading-apps) and [WordPress](https://sleeklogos.design/web-app/13664/wordpress).
 
 
-## More from Icons8
+## The rest of the library
 
 Several packs above (Windows 10, Color, Line Awesome, WPF) come from [Icons8](https://icons8.com) — here's the rest of the library:
 
